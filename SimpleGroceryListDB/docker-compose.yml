@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  postgres-db:
+    build: .
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=grocery
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - type: bind
+        source: /data/postgres
+        target: /var/lib/postgresql/data
+

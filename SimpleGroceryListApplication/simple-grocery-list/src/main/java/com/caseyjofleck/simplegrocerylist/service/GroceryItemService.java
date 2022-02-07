@@ -1,6 +1,5 @@
 package com.caseyjofleck.simplegrocerylist.service;
 
-import com.caseyjofleck.simplegrocerylist.controller.GroceryItemController;
 import com.caseyjofleck.simplegrocerylist.exception.GroceryItemException;
 import com.caseyjofleck.simplegrocerylist.model.GroceryItem;
 import com.caseyjofleck.simplegrocerylist.repository.GroceryItemRepository;

@@ -120,7 +120,7 @@ paths:
                     timestamp: '2022-02-06T19:19:21.9424049'
           description: Internal Server Error
       operationId: DeleteAllGroceries
-      summary: Delete all groceries.
+      summary: Remove all groceries
       description: '## Delete all groceries from list.'
   /groceries/{id}:
     delete:
@@ -212,8 +212,8 @@ paths:
                 $ref: '#/components/schemas/500ErrorResponse'
           description: Internal Server Error
       operationId: DeleteItem
-      summary: Delete Item
-      description: '## Delete item from list'
+      summary: Remove Item
+      description: '## Remove item from list'
 components:
   schemas:
     GroceryItem:

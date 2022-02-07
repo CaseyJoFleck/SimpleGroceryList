@@ -16,37 +16,58 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+--
+-- Name: grocery_item_sequence; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.grocery_item_sequence
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.grocery_item_sequence OWNER TO postgres;
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: groceryitem; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grocery_item; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.groceryitem (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL
+CREATE TABLE public.grocery_item (
+                                     id integer DEFAULT nextval('public.grocery_item_sequence'::regclass) NOT NULL,
+                                     name character varying(100) NOT NULL,
+                                     quantity integer DEFAULT 1 NOT NULL
 );
 
 
-ALTER TABLE public.groceryitem OWNER TO postgres;
+ALTER TABLE public.grocery_item OWNER TO postgres;
 
 --
--- Data for Name: groceryitem; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grocery_item; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.groceryitem (id, name) FROM stdin;
-0	dog food
+COPY public.grocery_item (id, name, quantity) FROM stdin;
 \.
 
 
 --
--- Name: groceryitem groceryitem_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grocery_item_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.groceryitem
-    ADD CONSTRAINT groceryitem_pkey PRIMARY KEY (id);
+SELECT pg_catalog.setval('public.grocery_item_sequence', 1, false);
+
+
+--
+-- Name: grocery_item grocery_item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.grocery_item
+    ADD CONSTRAINT grocery_item_pkey PRIMARY KEY (id);
 
 
 --

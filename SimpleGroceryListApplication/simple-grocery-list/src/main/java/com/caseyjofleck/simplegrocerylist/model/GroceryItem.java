@@ -4,15 +4,18 @@ import jakarta.persistence.*;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Entity
-@Table(name = "GroceryItem")
+@Table(name = "grocery_item")
 public class GroceryItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
+
+    private Integer quantity = 1;
 
     public Integer getId() {
         return id;
@@ -30,6 +33,14 @@ public class GroceryItem {
         this.name = name;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,19 +49,20 @@ public class GroceryItem {
 
         GroceryItem that = (GroceryItem) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(quantity, that.quantity).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id).append(name).append(quantity).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
+        return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
                 .append("id", id)
                 .append("name", name)
+                .append("quantity", quantity)
                 .toString();
     }
 }

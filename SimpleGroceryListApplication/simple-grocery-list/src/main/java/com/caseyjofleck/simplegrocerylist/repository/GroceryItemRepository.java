@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface GroceryItemRepository extends JpaRepository<GroceryItem, Integer> {
-    List<GroceryItem> removeGroceryItemByName(String name);
 }

@@ -57,7 +57,7 @@ public class GroceryItemController {
     public ResponseEntity<?> deleteOneById(@PathVariable Integer id) {
         LOGGER.info("Removing grocery item {} from list", id);
         GroceryItem groceryItem = groceryItemService.deleteAllById(id);
-        return createResponse(String.format("Grocery item %s has been removed from list.", groceryItem.getName()));
+        return createResponse(String.format("%s has been removed from list.", groceryItem.getName()));
     }
 
     @DeleteMapping

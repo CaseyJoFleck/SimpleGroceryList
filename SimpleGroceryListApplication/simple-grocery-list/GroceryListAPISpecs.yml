@@ -1,0 +1,263 @@
+openapi: 3.0.2
+info:
+  title: Simple Grocery List
+  version: 1.0.0
+  description: This application is to view, add, and delete items from a grocery list.
+  contact:
+    name: Casey Fleck
+    url: https://github.com/CaseyJoFleck/SimpleGroceryList
+    email: casejofleck@gmail.com
+servers:
+  - url: http://localhost:8080
+    description: LOCAL
+paths:
+  /groceries:
+    get:
+      tags:
+        - Groceries
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroceryItem'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: No groceries found.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/500ErrorResponse'
+          description: Internal Server Error
+      deprecated: false
+      operationId: all
+      summary: Get All Groceries
+      description: '## Get all groceries from grocery list'
+    put:
+      requestBody:
+        description: Either include name to add an item or item id to update its quantity.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroceryItem'
+        required: true
+      tags:
+        - Groceries
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: Operation cannot continue. Item not found in grocery list.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/500ErrorResponse'
+          description: Internal Server Error
+      operationId: AddOrUpdateItem
+      summary: Add Or Update Item
+      description: '## Add Item or Update Quantity'
+    delete:
+      tags:
+        - Groceries
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Delete All Groceries:
+                  value:
+                    message: Grocery item Eggs has been removed from list.
+                    timestamp: '2022-02-06T19:07:32.3406995'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: Operation cannot continue. Item not found in grocery list.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Internal Server Error:
+                  value:
+                    message: An internal error has occurred. Please try again later.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Internal Server Error
+      operationId: DeleteAllGroceries
+      summary: Delete all groceries.
+      description: '## Delete all groceries from list.'
+  /groceries/{id}:
+    delete:
+      tags:
+        - Groceries
+      parameters:
+        - examples:
+            Item Id:
+              value: '3'
+          name: id
+          description: Grocery item id.
+          schema:
+            type: integer
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Ok:
+                  value:
+                    message: Grocery item Eggs has been removed from list.
+                    timestamp: '2022-02-06T19:07:32.3406995'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: Operation cannot continue. Item not found in grocery list.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/500ErrorResponse'
+          description: Internal Server Error
+      operationId: DecreaseItemQuantity
+      summary: Remove 1 Quantity
+      description: '## Decrease item quantity by one. If only one item exists, item will be removed item from list.'
+  /groceries/all/{id}:
+    delete:
+      tags:
+        - Groceries
+      parameters:
+        - examples:
+            id:
+              value: '5'
+          name: id
+          description: id of item to delete
+          schema:
+            type: number
+          in: path
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Deleted:
+                  value:
+                    message: Bread has been removed from list.
+                    timestamp: '2022-02-06T19:07:32.3406995'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: Operation cannot continue. Item not found in grocery list.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/500ErrorResponse'
+          description: Internal Server Error
+      operationId: DeleteItem
+      summary: Delete Item
+      description: '## Delete item from list'
+components:
+  schemas:
+    GroceryItem:
+      title: GroceryItem
+      description: An item from a grocery list.
+      required:
+        - name
+        - quantity
+      type: object
+      properties:
+        id:
+          format: int32
+          description: Unique id related to item.
+          type: integer
+          example: '5'
+        name:
+          description: The item name.
+          type: string
+          example: Butter
+        quantity:
+          description: The amount of the item.
+          type: integer
+          example: '1'
+    ResponseBody:
+      title: ErrorResponseNotFound
+      description: Groceries were not found
+      type: object
+      properties:
+        message:
+          description: Message of body.
+          type: string
+        timestamp:
+          description: Timestamp in IS0 format.
+          type: string
+    500ErrorResponse:
+      title: 500ErrorResponse
+      description: Internal Server Error
+      type: object
+      properties:
+        message:
+          description: Message of error.
+          type: string
+          example: "An internal error has occurred. Please try again later."
+        timestamp:
+          description: Timestamp in ISO format.
+          type: string
+          example: "2022-02-06T19:19:21.9424049"

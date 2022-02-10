@@ -3,6 +3,7 @@ package com.caseyjofleck.simplegrocerylist.service;
 import com.caseyjofleck.simplegrocerylist.exception.GroceryItemException;
 import com.caseyjofleck.simplegrocerylist.model.GroceryItem;
 import com.caseyjofleck.simplegrocerylist.repository.GroceryItemRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -26,12 +27,11 @@ public class GroceryItemService {
         return gi;
     }
 
-    public GroceryItem add(GroceryItem groceryItem){
-        if(groceryItem.getId() != null){
-            checkIfItemExists(groceryItem.getId());
-            groceryItem = groceryItemRepository.findById(groceryItem.getId()).get();
-            groceryItem.setQuantity(groceryItem.getQuantity()+1);
-            LOGGER.debug("Grocery item {} has been increased by 1", groceryItem.getId());
+    public GroceryItem addGrocery(GroceryItem groceryItem){
+        groceryItem.setId(null);
+        if(StringUtils.isBlank(groceryItem.getName())){
+            LOGGER.error("Grocery item name must not be blank when adding new item.");
+            throw new GroceryItemException("Grocery item name must not be blank when adding new item.", HttpStatus.BAD_REQUEST);
         }
         if(groceryItem.getQuantity() <= 0){
             LOGGER.error("The quantity of items must be greater than 0 for input item {}.", groceryItem.getName());
@@ -42,7 +42,17 @@ public class GroceryItemService {
         return groceryItem;
     }
 
-    public GroceryItem deleteById(Integer id) {
+    public GroceryItem addQuantity(Integer id){
+        checkIfItemExists(id);
+        GroceryItem groceryItem = groceryItemRepository.findById(id).get();
+        groceryItem.setQuantity(groceryItem.getQuantity()+1);
+        LOGGER.debug("Grocery item {} has been increased by 1", groceryItem.getId());
+        groceryItem = groceryItemRepository.save(groceryItem);
+        LOGGER.info("Grocery item {} has added", groceryItem.getId());
+        return groceryItem;
+    }
+
+    public GroceryItem removeQuantity(Integer id) {
         checkIfItemExists(id);
         GroceryItem groceryItem = groceryItemRepository.findById(id).get();
 
@@ -61,7 +71,7 @@ public class GroceryItemService {
         return groceryItem;
     }
 
-    public GroceryItem deleteAllById(Integer id) {
+    public GroceryItem removeGroceryById(Integer id) {
         checkIfItemExists(id);
         GroceryItem groceryItem = groceryItemRepository.findById(id).get();
         groceryItemRepository.deleteById(id);
@@ -69,13 +79,15 @@ public class GroceryItemService {
         return groceryItem;
     }
 
-    public void deleteAll() {;
+    public void removeGroceries() {
+        if( groceryItemRepository.count() == 0) throw new GroceryItemException("No groceries found.", HttpStatus.NOT_FOUND);
         groceryItemRepository.deleteAll();
         LOGGER.info("All grocery items have been removed");
     }
 
     private void checkIfItemExists(Integer id){
         if(!groceryItemRepository.existsById(id))
+            LOGGER.error("Operation cannot continue. Item not found in grocery list.");
             throw new GroceryItemException("Operation cannot continue. Item not found in grocery list.", HttpStatus.NOT_FOUND);
     }
 

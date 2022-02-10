@@ -15,6 +15,8 @@ paths:
     get:
       tags:
         - Groceries
+      summary: Get All Groceries
+      description: '## Get all groceries from grocery list'
       responses:
         '200':
           content:
@@ -41,20 +43,100 @@ paths:
               schema:
                 $ref: '#/components/schemas/500ErrorResponse'
           description: Internal Server Error
-      deprecated: false
-      operationId: all
-      summary: Get All Groceries
-      description: '## Get all groceries from grocery list'
-    put:
+    post:
+      summary: Add Item
+      description: '## Add Grocery Item'
       requestBody:
-        description: Either include name to add an item or item id to update its quantity.
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GroceryItem'
+              $ref: '#/components/schemas/AddGroceryItem'
         required: true
       tags:
         - Groceries
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+          description: OK
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Invalid Quantity:
+                  value:
+                    message: The quantity of items must be greater than 0.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+                Missing Field:
+                  value:
+                    message: Grocery item name must not be blank when adding new item.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Bad Request
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/500ErrorResponse'
+          description: Internal Server Error
+    delete:
+      tags:
+        - Groceries
+      summary: Remove All Groceries
+      description: '## Delete all groceries from list'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Delete All Groceries:
+                  value:
+                    message: All grocery items have been removed from list.
+                    timestamp: '2022-02-06T19:07:32.3406995'
+          description: OK
+        '404':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Not Found:
+                  value:
+                    message: No groceries found.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Not Found
+        '500':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseBody'
+              examples:
+                Internal Server Error:
+                  value:
+                    message: An internal error has occurred. Please try again later.
+                    timestamp: '2022-02-06T19:19:21.9424049'
+          description: Internal Server Error
+  /groceries/{id}:
+    put:
+      tags:
+        - Groceries
+      summary: Add Quantity
+      description: '## Add Quantity'
+      parameters:
+        - examples:
+            Item Id:
+              value: '3'
+          name: id
+          description: Grocery item id.
+          schema:
+            type: integer
+          in: path
+          required: true
       responses:
         '200':
           content:
@@ -79,53 +161,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/500ErrorResponse'
           description: Internal Server Error
-      operationId: AddOrUpdateItem
-      summary: Add Or Update Item
-      description: '## Add Item or Update Quantity'
     delete:
       tags:
         - Groceries
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseBody'
-              examples:
-                Delete All Groceries:
-                  value:
-                    message: Grocery item Eggs has been removed from list.
-                    timestamp: '2022-02-06T19:07:32.3406995'
-          description: OK
-        '404':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseBody'
-              examples:
-                Not Found:
-                  value:
-                    message: Operation cannot continue. Item not found in grocery list.
-                    timestamp: '2022-02-06T19:19:21.9424049'
-          description: Not Found
-        '500':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseBody'
-              examples:
-                Internal Server Error:
-                  value:
-                    message: An internal error has occurred. Please try again later.
-                    timestamp: '2022-02-06T19:19:21.9424049'
-          description: Internal Server Error
-      operationId: DeleteAllGroceries
-      summary: Remove all groceries
-      description: '## Delete all groceries from list.'
-  /groceries/{id}:
-    delete:
-      tags:
-        - Groceries
+      operationId: RemoveOneItemQuantity
+      summary: Remove one Quantity
+      description: '## Decrease item quantity by one. If only one item exists, item will be removed item from list'
       parameters:
         - examples:
             Item Id:
@@ -165,13 +206,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/500ErrorResponse'
           description: Internal Server Error
-      operationId: DecreaseItemQuantity
-      summary: Remove 1 Quantity
-      description: '## Decrease item quantity by one. If only one item exists, item will be removed item from list.'
   /groceries/all/{id}:
     delete:
       tags:
         - Groceries
+      summary: Remove Grocery
+      description: '## Remove Grocery By Id'
       parameters:
         - examples:
             id:
@@ -211,9 +251,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/500ErrorResponse'
           description: Internal Server Error
-      operationId: DeleteItem
-      summary: Remove Item
-      description: '## Remove item from list'
 components:
   schemas:
     GroceryItem:
@@ -236,7 +273,23 @@ components:
         quantity:
           description: The amount of the item.
           type: integer
-          example: '1'
+          example: '2'
+    AddGroceryItem:
+      title: AddGroceryItem
+      description: A grocery item to add.
+      required:
+        - name
+        - quantity
+      type: object
+      properties:
+        name:
+          description: The item name.
+          type: string
+          example: Butter
+        quantity:
+          description: The amount of the item.
+          type: integer
+          example: '2'
     ResponseBody:
       title: ErrorResponseNotFound
       description: Groceries were not found

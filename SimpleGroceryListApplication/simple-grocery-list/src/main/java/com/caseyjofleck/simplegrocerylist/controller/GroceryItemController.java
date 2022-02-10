@@ -24,26 +24,37 @@ public class GroceryItemController {
     }
 
     @GetMapping
-    public List<GroceryItem> all(){
+    public List<GroceryItem> getAll(){
         LOGGER.info("Retrieving all groceries from list");
         return groceryItemService.getGroceries();
     }
 
     /**
-     * Add a new item or increase the quantity by 1. If increasing quantity, must include id of item
-     * @param groceryItem the item to be added or increased in quantity
+     * Add a new grocery item
+     * @param groceryItem the item to be added
      * @return the grocery item
      */
-    @PutMapping
+    @PostMapping
     public GroceryItem addGrocery(@RequestBody GroceryItem groceryItem){
         LOGGER.info("Adding grocery item {} to list", groceryItem.getName());
-        return groceryItemService.add(groceryItem);
+        return groceryItemService.addGrocery(groceryItem);
+    }
+
+    /**
+     * Increase the quantity by 1
+     * @param id the item to be increased in quantity
+     * @return the grocery item
+     */
+    @PutMapping("/{id}")
+    public GroceryItem addQuantity(@PathVariable Integer id){
+        LOGGER.info("Adding one quantity to grocery item {}", id);
+        return groceryItemService.addQuantity(id);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Integer id) {
+    public ResponseEntity<?> removeQuantity(@PathVariable Integer id) {
         LOGGER.info("Decreasing quantity of grocery item {}", id);
-        GroceryItem groceryItem = groceryItemService.deleteById(id);
+        GroceryItem groceryItem = groceryItemService.removeQuantity(id);
         return createResponse(
                 String.format("One item of %s has been removed. %s",
                         groceryItem.getName(),
@@ -54,16 +65,16 @@ public class GroceryItemController {
     }
 
     @DeleteMapping("all/{id}")
-    public ResponseEntity<?> deleteOneById(@PathVariable Integer id) {
+    public ResponseEntity<?> removeGroceryById(@PathVariable Integer id) {
         LOGGER.info("Removing grocery item {} from list", id);
-        GroceryItem groceryItem = groceryItemService.deleteAllById(id);
+        GroceryItem groceryItem = groceryItemService.removeGroceryById(id);
         return createResponse(String.format("%s has been removed from list.", groceryItem.getName()));
     }
 
     @DeleteMapping
-    public ResponseEntity<?> deleteAll() {
+    public ResponseEntity<?> removeAll() {
         LOGGER.info("Removing all grocery items from list");
-        groceryItemService.deleteAll();
+        groceryItemService.removeGroceries();
         return createResponse("All grocery items have been removed from list.");
     }
 

@@ -52,16 +52,9 @@ public class GroceryItemController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> removeQuantity(@PathVariable Integer id) {
+    public GroceryItem removeQuantity(@PathVariable Integer id) {
         LOGGER.info("Decreasing quantity of grocery item {}", id);
-        GroceryItem groceryItem = groceryItemService.removeQuantity(id);
-        return createResponse(
-                String.format("One item of %s has been removed. %s",
-                        groceryItem.getName(),
-                        groceryItem.getQuantity() == 0 ?
-                                String.format("There are no longer %s in this list.", groceryItem.getName()) :
-                                String.format("Quantity of %s is now %d.", groceryItem.getName(),
-                                        groceryItem.getQuantity())));
+        return groceryItemService.removeQuantity(id);
     }
 
     @DeleteMapping("all/{id}")

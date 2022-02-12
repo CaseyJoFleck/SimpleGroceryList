@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="log.base" value="./log/logback"/>
+    <property name="app.name" value="GroceryItemApplication"/>
+    <property name="service.package" value="com.caseyjofleck.simplegrocerylist"/>
+    <property name="log.pattern" value="%d{ISO8601} ${LOG_LEVEL_PATTERN:-%5p} [${app.name}][request_path:%X{requestPath}[%X{requestMethod}]][session_id:%X{sessionId}] - %m%n"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="logfile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log.base}.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.base}.%d{yyyy -MM-dd}.log.zip</FileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.springframework.web" level="debug"/>
+    <logger name="${service.package}" level="debug"/>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="logfile"/>
+    </root>
+</configuration>

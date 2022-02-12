@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="log.base" value="./log/logback"/>
+    <property name="app.name" value="GroceryItemApplication"/>
+    <property name="service.package" value="com.caseyjofleck.simplegrocerylist"/>
+    <property name="log.pattern" value="%d{ISO8601} ${LOG_LEVEL_PATTERN:-%5p} [${app.name}][request_path:%X{requestPath}][class_level:%X{classLevel}] - %m%n"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="info"/>
+    <logger name="${service.package}" level="info"/>
+
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

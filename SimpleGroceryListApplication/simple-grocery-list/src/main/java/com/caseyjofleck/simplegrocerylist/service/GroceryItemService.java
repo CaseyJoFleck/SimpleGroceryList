@@ -41,17 +41,18 @@ public class GroceryItemService {
             throw new GroceryItemException("The quantity of items must be greater than 0.", HttpStatus.BAD_REQUEST);
         }
         groceryItem = groceryItemRepository.save(groceryItem);
-        LOGGER.info("Grocery item {} has added", groceryItem.getId());
+        LOGGER.info("Grocery item {}[id={}] has been been added", groceryItem.getName(), groceryItem.getId());
         return groceryItem;
     }
 
     public GroceryItem addQuantity(Integer id){
         checkIfItemExists(id);
         GroceryItem groceryItem = groceryItemRepository.findById(id).get();
+        LOGGER.debug("Grocery item {}[id={}] quantity is currently {}", groceryItem.getName(), groceryItem.getId(), groceryItem.getQuantity());
         groceryItem.setQuantity(groceryItem.getQuantity()+1);
-        LOGGER.debug("Grocery item {} has been increased by 1", groceryItem.getId());
         groceryItem = groceryItemRepository.save(groceryItem);
-        LOGGER.info("Grocery item {} has added", groceryItem.getId());
+        LOGGER.info("Grocery item {}[id={}] has been increased by 1", groceryItem.getName(), groceryItem.getId());
+        LOGGER.debug("Grocery item {}[id={}] quantity is now {}", groceryItem.getName(), groceryItem.getId(), groceryItem.getQuantity());
         return groceryItem;
     }
 
@@ -81,7 +82,7 @@ public class GroceryItemService {
         checkIfItemExists(id);
         GroceryItem groceryItem = groceryItemRepository.findById(id).get();
         groceryItemRepository.deleteById(id);
-        LOGGER.info("Grocery item {} has been deleted", id);
+        LOGGER.info("Grocery item {}[id={}] has been deleted", groceryItem.getName(), groceryItem.getId());
         return groceryItem;
     }
 

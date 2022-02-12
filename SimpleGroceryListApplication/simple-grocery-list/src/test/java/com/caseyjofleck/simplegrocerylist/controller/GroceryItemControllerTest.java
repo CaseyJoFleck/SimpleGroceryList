@@ -21,6 +21,9 @@ import java.util.List;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 
+/**
+ * Tests both controller and controller advice
+ */
 class GroceryItemControllerTest {
 
     private GroceryItemService groceryItemService;

@@ -1,10 +1,11 @@
 package com.caseyjofleck.simplegrocerylist.model;
 
-import jakarta.persistence.*;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "grocery_item")

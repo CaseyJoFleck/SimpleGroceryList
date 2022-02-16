@@ -1,0 +1,893 @@
+2022-02-15 15:59:27,794  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting SimpleGroceryListApplication using Java 17.0.2 on CFLECKLT with PID 7320 (C:\Users\casey.fleck\Documents\Projects_Repos\PracticeProjects\Example_Projects\SimpleGroceryList\SimpleGroceryListApplication\simple-grocery-list\target\classes started by casey.fleck in C:\Users\casey.fleck\Documents\Projects_Repos\PracticeProjects\Example_Projects\SimpleGroceryList\SimpleGroceryListApplication\simple-grocery-list)
+2022-02-15 15:59:27,797 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-15 15:59:27,797  INFO [GroceryItemApplication][request_path:[]][session_id:] - No active profile set, falling back to default profiles: default
+2022-02-15 15:59:28,676  INFO [GroceryItemApplication][request_path:[]][session_id:] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-15 15:59:28,737  INFO [GroceryItemApplication][request_path:[]][session_id:] - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+2022-02-15 15:59:29,378  INFO [GroceryItemApplication][request_path:[]][session_id:] - Tomcat initialized with port(s): 8080 (http)
+2022-02-15 15:59:29,386  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-02-15 15:59:29,386  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting service [Tomcat]
+2022-02-15 15:59:29,386  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-15 15:59:29,485  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Spring embedded WebApplicationContext
+2022-02-15 15:59:29,485  INFO [GroceryItemApplication][request_path:[]][session_id:] - Root WebApplicationContext: initialization completed in 1627 ms
+2022-02-15 15:59:29,624 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Filter 'loggerFilter' configured for use
+2022-02-15 15:59:29,625 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Filter 'forwardedHeaderFilter' configured for use
+2022-02-15 15:59:29,757  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Starting...
+2022-02-15 15:59:29,920  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Start completed.
+2022-02-15 15:59:29,977  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-15 15:59:30,035  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-15 15:59:30,230  INFO [GroceryItemApplication][request_path:[]][session_id:] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-15 15:59:30,361  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-02-15 15:59:30,878  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-15 15:59:30,888  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-15 15:59:31,331  WARN [GroceryItemApplication][request_path:[]][session_id:] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-15 15:59:31,830 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-15 15:59:31,924 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - 12 mappings in 'requestMappingHandlerMapping'
+2022-02-15 15:59:32,416 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Patterns [/webjars/**, /**, /swagger-ui/swagger-ui*/**] in 'resourceHandlerMapping'
+2022-02-15 15:59:32,431 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-15 15:59:32,875  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting ProtocolHandler ["http-nio-8080"]
+2022-02-15 15:59:32,902  INFO [GroceryItemApplication][request_path:[]][session_id:] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-15 15:59:32,915  INFO [GroceryItemApplication][request_path:[]][session_id:] - Started SimpleGroceryListApplication in 5.639 seconds (JVM running for 7.28)
+2022-02-15 15:59:34,690  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-15 15:59:34,690  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Servlet 'dispatcherServlet'
+2022-02-15 15:59:34,691 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected StandardServletMultipartResolver
+2022-02-15 15:59:34,691 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected AcceptHeaderLocaleResolver
+2022-02-15 15:59:34,691 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected FixedThemeResolver
+2022-02-15 15:59:34,692 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7e2e0b8a
+2022-02-15 15:59:34,692 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@b5d7233
+2022-02-15 15:59:34,692 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-15 15:59:34,692  INFO [GroceryItemApplication][request_path:[]][session_id:] - Completed initialization in 2 ms
+2022-02-15 15:59:34,755 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/swagger-ui/swagger-ui/index.html", parameters={}
+2022-02-15 15:59:34,770 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 15:59:34,808 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:34,855 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui.css[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/swagger-ui/swagger-ui/swagger-ui.css", parameters={}
+2022-02-15 15:59:34,857 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-standalone-preset.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/swagger-ui/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2022-02-15 15:59:34,859 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui.css[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 15:59:34,859 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-standalone-preset.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 15:59:34,858 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-bundle.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/swagger-ui/swagger-ui/swagger-ui-bundle.js", parameters={}
+2022-02-15 15:59:34,862 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui.css[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:34,862 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-standalone-preset.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:34,862 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-bundle.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 15:59:34,865 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/swagger-ui-bundle.js[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:35,303 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/v3/api-docs/swagger-config", parameters={}
+2022-02-15 15:59:35,304 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2022-02-15 15:59:35,305 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/favicon-32x32.png[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/swagger-ui/swagger-ui/favicon-32x32.png", parameters={}
+2022-02-15 15:59:35,307 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/favicon-32x32.png[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 15:59:35,310 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/favicon-32x32.png[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:35,324 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Using 'application/json', given [*/*] and supported [application/json]
+2022-02-15 15:59:35,325 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/swagger-u (truncated)...]
+2022-02-15 15:59:35,334 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 200 OK
+2022-02-15 15:59:35,368 DEBUG [GroceryItemApplication][request_path:/simple-grocery-list-specs.yaml[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/simple-grocery-list-specs.yaml", parameters={}
+2022-02-15 15:59:35,369 DEBUG [GroceryItemApplication][request_path:/simple-grocery-list-specs.yaml[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2022-02-15 15:59:35,372 DEBUG [GroceryItemApplication][request_path:/simple-grocery-list-specs.yaml[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 304 NOT_MODIFIED
+2022-02-15 15:59:39,782 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/groceries", parameters={}
+2022-02-15 15:59:39,783 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 15:59:39,785  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Retrieving all groceries from list
+2022-02-15 15:59:39,924 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - No groceries found.
+2022-02-15 15:59:39,926 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 15:59:39,929 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 15:59:39,937 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 15:59:39,938 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Writing [{message=No groceries found., timestamp=2022-02-15T15:59:39.934315800}]
+2022-02-15 15:59:39,954 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 15:59:39,955 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 404 NOT_FOUND
+2022-02-15 15:59:54,135 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - POST "/groceries", parameters={}
+2022-02-15 15:59:54,135 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 15:59:54,176 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"Butter","quantity":2}]
+2022-02-15 15:59:54,185  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Adding grocery item Butter to list
+2022-02-15 15:59:54,228  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Grocery item Butter[id=1] has been been added
+2022-02-15 15:59:54,237 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 15:59:54,237 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Writing [{"id":1,"name":"Butter","quantity":2}]
+2022-02-15 15:59:54,239 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 200 OK
+2022-02-15 15:59:57,532 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - GET "/groceries", parameters={}
+2022-02-15 15:59:57,533 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 15:59:57,533  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Retrieving all groceries from list
+2022-02-15 15:59:57,558 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 15:59:57,558 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Writing [[{"id":1,"name":"Butter","quantity":2}]]
+2022-02-15 15:59:57,560 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:AC715715771BDED97459D4A4E47CDF66] - Completed 200 OK
+2022-02-15 16:00:02,553  INFO [GroceryItemApplication][request_path:[]][session_id:] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-15 16:00:02,555  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Shutdown initiated...
+2022-02-15 16:00:02,560  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Shutdown completed.
+2022-02-15 16:40:43,264  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting SimpleGroceryListApplication using Java 17.0.2 on CFLECKLT with PID 19292 (C:\Users\casey.fleck\Documents\Projects_Repos\PracticeProjects\Example_Projects\SimpleGroceryList\SimpleGroceryListApplication\simple-grocery-list\target\classes started by casey.fleck in C:\Users\casey.fleck\Documents\Projects_Repos\PracticeProjects\Example_Projects\SimpleGroceryList\SimpleGroceryListApplication\simple-grocery-list)
+2022-02-15 16:40:43,267 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-15 16:40:43,267  INFO [GroceryItemApplication][request_path:[]][session_id:] - No active profile set, falling back to default profiles: default
+2022-02-15 16:40:44,023  INFO [GroceryItemApplication][request_path:[]][session_id:] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-15 16:40:44,080  INFO [GroceryItemApplication][request_path:[]][session_id:] - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2022-02-15 16:40:44,678  INFO [GroceryItemApplication][request_path:[]][session_id:] - Tomcat initialized with port(s): 8080 (http)
+2022-02-15 16:40:44,689  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-02-15 16:40:44,690  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting service [Tomcat]
+2022-02-15 16:40:44,690  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-15 16:40:44,779  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Spring embedded WebApplicationContext
+2022-02-15 16:40:44,780  INFO [GroceryItemApplication][request_path:[]][session_id:] - Root WebApplicationContext: initialization completed in 1458 ms
+2022-02-15 16:40:44,913 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Filter 'loggerFilter' configured for use
+2022-02-15 16:40:44,914 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Filter 'forwardedHeaderFilter' configured for use
+2022-02-15 16:40:45,040  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Starting...
+2022-02-15 16:40:45,185  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Start completed.
+2022-02-15 16:40:45,238  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-15 16:40:45,288  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-15 16:40:45,445  INFO [GroceryItemApplication][request_path:[]][session_id:] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-15 16:40:45,568  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-02-15 16:40:45,999  INFO [GroceryItemApplication][request_path:[]][session_id:] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-15 16:40:46,008  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-15 16:40:46,447  WARN [GroceryItemApplication][request_path:[]][session_id:] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-15 16:40:46,904 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-15 16:40:46,988 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - 12 mappings in 'requestMappingHandlerMapping'
+2022-02-15 16:40:47,439 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Patterns [/webjars/**, /**, /swagger-ui/swagger-ui*/**] in 'resourceHandlerMapping'
+2022-02-15 16:40:47,454 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-15 16:40:47,903  INFO [GroceryItemApplication][request_path:[]][session_id:] - Starting ProtocolHandler ["http-nio-8080"]
+2022-02-15 16:40:47,924  INFO [GroceryItemApplication][request_path:[]][session_id:] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-15 16:40:47,936  INFO [GroceryItemApplication][request_path:[]][session_id:] - Started SimpleGroceryListApplication in 5.201 seconds (JVM running for 6.239)
+2022-02-15 16:40:51,341  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-15 16:40:51,341  INFO [GroceryItemApplication][request_path:[]][session_id:] - Initializing Servlet 'dispatcherServlet'
+2022-02-15 16:40:51,341 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected StandardServletMultipartResolver
+2022-02-15 16:40:51,341 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected AcceptHeaderLocaleResolver
+2022-02-15 16:40:51,341 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected FixedThemeResolver
+2022-02-15 16:40:51,343 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@b889cb6
+2022-02-15 16:40:51,344 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1fa44f66
+2022-02-15 16:40:51,344 DEBUG [GroceryItemApplication][request_path:[]][session_id:] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-15 16:40:51,344  INFO [GroceryItemApplication][request_path:[]][session_id:] - Completed initialization in 3 ms
+2022-02-15 16:40:51,414 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/swagger-ui/swagger-ui/index.html", parameters={}
+2022-02-15 16:40:51,428 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 16:40:51,463 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 304 NOT_MODIFIED
+2022-02-15 16:40:51,916 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/v3/api-docs/swagger-config", parameters={}
+2022-02-15 16:40:51,917 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2022-02-15 16:40:51,932 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [*/*] and supported [application/json]
+2022-02-15 16:40:51,933 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/swagger-u (truncated)...]
+2022-02-15 16:40:51,940 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:40:59,464 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:40:59,465 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:40:59,466  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:40:59,591 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:40:59,592 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:40:59,594 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:40:59,600 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:40:59,601 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:40:59.598411200}]
+2022-02-15 16:40:59,616 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:40:59,616 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:41:06,687 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - POST "/groceries", parameters={}
+2022-02-15 16:41:06,687 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 16:41:06,726 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"Butter","quantity":2}]
+2022-02-15 16:41:06,734  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Adding grocery item Butter to list
+2022-02-15 16:41:06,791  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Grocery item Butter[id=1] has been been added
+2022-02-15 16:41:06,797 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:41:06,798 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{"id":1,"name":"Butter","quantity":2}]
+2022-02-15 16:41:06,800 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:41:08,126 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - POST "/groceries", parameters={}
+2022-02-15 16:41:08,135 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 16:41:08,137 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"Butter","quantity":2}]
+2022-02-15 16:41:08,138  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Adding grocery item Butter to list
+2022-02-15 16:41:08,151  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Grocery item Butter[id=2] has been been added
+2022-02-15 16:41:08,151 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:41:08,151 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{"id":2,"name":"Butter","quantity":2}]
+2022-02-15 16:41:08,152 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:41:12,670 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:41:12,670 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:41:12,671  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:41:12,686 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:41:12,686 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [[{"id":1,"name":"Butter","quantity":2}, {"id":2,"name":"Butter","quantity":2}]]
+2022-02-15 16:41:12,689 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:41:56,706 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/swagger-ui/swagger-ui/index.html", parameters={}
+2022-02-15 16:41:56,709 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 16:41:56,714 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 304 NOT_MODIFIED
+2022-02-15 16:41:56,981 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/v3/api-docs/swagger-config", parameters={}
+2022-02-15 16:41:56,982 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2022-02-15 16:41:56,983 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [*/*] and supported [application/json]
+2022-02-15 16:41:56,983 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/swagger-u (truncated)...]
+2022-02-15 16:41:56,985 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:42:00,536 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:42:00,537 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:42:00,537  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:42:00,542  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@59c0fd94 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,544  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7bab910e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,544  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@25d9ffb2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,545  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5bc16bc4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,545  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6bdfb7ad (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,548  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4c5b6839 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,550  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@26152a6f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,551  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@76dafa22 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,552  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@60ae498b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,552  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7723ff07 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:42:00,584 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:42:00,584 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:42:00,584 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:42:00,585 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:42:00,585 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:42:00.585459}]
+2022-02-15 16:42:00,586 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:42:00,587 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:44:55,310 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/swagger-ui/swagger-ui/index.html", parameters={}
+2022-02-15 16:44:55,312 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-02-15 16:44:55,315 DEBUG [GroceryItemApplication][request_path:/swagger-ui/swagger-ui/index.html[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 304 NOT_MODIFIED
+2022-02-15 16:44:55,660 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/v3/api-docs/swagger-config", parameters={}
+2022-02-15 16:44:55,661 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2022-02-15 16:44:55,662 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [*/*] and supported [application/json]
+2022-02-15 16:44:55,662 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/swagger-u (truncated)...]
+2022-02-15 16:44:55,663 DEBUG [GroceryItemApplication][request_path:/v3/api-docs/swagger-config[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:44:59,099 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:44:59,099 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:44:59,100  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:44:59,101  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@418e77ea (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,102  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@109b3bca (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,103  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4350cb88 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,104  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@71d3d52f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,106  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5dd9e2e2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,107  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@14d5c7f8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,108  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@511c4261 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,109  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3e098fc0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,109  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2c55a411 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,110  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@16054c64 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:44:59,143 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:44:59,143 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:44:59,143 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:44:59,145 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:44:59,145 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:44:59.144550900}]
+2022-02-15 16:44:59,146 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:44:59,146 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:45:07,881 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - POST "/groceries", parameters={}
+2022-02-15 16:45:07,881 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 16:45:07,883 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"Butter","quantity":2}]
+2022-02-15 16:45:07,883  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Adding grocery item Butter to list
+2022-02-15 16:45:07,892  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Grocery item Butter[id=1] has been been added
+2022-02-15 16:45:07,892 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:45:07,893 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{"id":1,"name":"Butter","quantity":2}]
+2022-02-15 16:45:07,894 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:45:12,152 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - POST "/groceries", parameters={}
+2022-02-15 16:45:12,152 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 16:45:12,153 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"Butter","quantity":2}]
+2022-02-15 16:45:12,153  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Adding grocery item Butter to list
+2022-02-15 16:45:12,167  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Grocery item Butter[id=2] has been been added
+2022-02-15 16:45:12,167 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:45:12,167 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{"id":2,"name":"Butter","quantity":2}]
+2022-02-15 16:45:12,168 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:45:15,280 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:45:15,280 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:45:15,280  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:45:15,288 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:45:15,288 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [[{"id":1,"name":"Butter","quantity":2}, {"id":2,"name":"Butter","quantity":2}]]
+2022-02-15 16:45:15,289 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:45:39,742 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:45:39,742 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:45:39,742  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:45:39,743  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@63d04f65 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,744  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@e724d38 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,745  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@17be4e71 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,746  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@76f49084 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,747  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@46fd3234 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,747  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5afabc5e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,748  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3f52acb6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,748  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6df07b68 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,749  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@42b38870 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:39,750  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4da4d434 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:45:58,569 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:45:58,570 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:45:58,570 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:45:58,570 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:45:58,571 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:45:58.570597300}]
+2022-02-15 16:45:58,572 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:45:58,572 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:46:03,789 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:46:03,789 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:46:03,789  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:46:03,796 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:46:03,797 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:46:03,797 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:46:03,798 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:46:03,798 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:46:03.798146400}]
+2022-02-15 16:46:03,799 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:46:03,800 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:46:05,241 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:46:05,241 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:46:05,241  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:46:05,248 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:46:05,248 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:46:05,248 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:46:05,249 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:46:05,249 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:46:05.248806400}]
+2022-02-15 16:46:05,251 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:46:05,251 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:46:21,111 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:46:21,111 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:46:21,111  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:46:21,117 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:46:21,118 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:46:21,118 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:46:21,119 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:46:21,119 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:46:21.119060}]
+2022-02-15 16:46:21,120 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:46:21,120 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:47:15,881 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:47:15,881 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:47:15,881  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:47:15,882  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6478eff4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,883  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@9888c4e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,883  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2bbbdce1 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,884  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@89f912d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,885  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@9702f4c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,886  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@445738d0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,887  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@31fea86f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,887  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@451c4184 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,888  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4d9e1c24 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,889  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@30723cff (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:15,926 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+2022-02-15 16:47:15,926 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using @ExceptionHandler com.caseyjofleck.simplegrocerylist.controller.ControllerAdvice.GroceryControllerAdvice#handleGroceryItemException(GroceryItemException)
+2022-02-15 16:47:15,927 ERROR [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - No groceries found.
+com.caseyjofleck.simplegrocerylist.exception.GroceryItemException: No groceries found.
+	at com.caseyjofleck.simplegrocerylist.service.GroceryItemService.getGroceries(GroceryItemService.java:28)
+	at com.caseyjofleck.simplegrocerylist.controller.GroceryItemController.getAll(GroceryItemController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.caseyjofleck.simplegrocerylist.config.LoggerFilter.doFilterInternal(LoggerFilter.java:24)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-02-15 16:47:15,927 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:47:15,927 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{message=No groceries found., timestamp=2022-02-15T16:47:15.927128300}]
+2022-02-15 16:47:15,928 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Resolved [{"statusCode":404,"message":"No groceries found.","error":"Not Found"}]
+2022-02-15 16:47:15,929 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 404 NOT_FOUND
+2022-02-15 16:47:28,750 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - POST "/groceries", parameters={}
+2022-02-15 16:47:28,750 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#addGrocery(GroceryItem)
+2022-02-15 16:47:28,751 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Read "application/json;charset=UTF-8" to [{"id":null,"name":"food","quantity":2}]
+2022-02-15 16:47:28,752  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Adding grocery item food to list
+2022-02-15 16:47:28,773  INFO [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Grocery item food[id=1] has been been added
+2022-02-15 16:47:28,773 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:47:28,773 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [{"id":1,"name":"food","quantity":2}]
+2022-02-15 16:47:28,774 DEBUG [GroceryItemApplication][request_path:/groceries[POST]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:47:32,227 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:47:32,227 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:47:32,227  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:47:32,234 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:47:32,235 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [[{"id":1,"name":"food","quantity":2}]]
+2022-02-15 16:47:32,236 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:47:54,049 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:47:54,050 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:47:54,050  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:47:54,050  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@f83da60 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,051  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5ed89baa (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,052  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@62950dcf (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,053  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@73549b27 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,054  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4089e7a3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,056  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5a9621d3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,057  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1027a43b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,058  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@477d88bb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,059  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@48c6db08 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,060  WARN [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@23b5e37a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2022-02-15 16:47:54,093 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:47:54,094 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [[{"id":1,"name":"food","quantity":2}]]
+2022-02-15 16:47:54,094 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 16:47:55,985 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - GET "/groceries", parameters={}
+2022-02-15 16:47:55,985 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Mapped to com.caseyjofleck.simplegrocerylist.controller.GroceryItemController#getAll()
+2022-02-15 16:47:55,985  INFO [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Retrieving all groceries from list
+2022-02-15 16:47:55,992 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-15 16:47:55,992 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Writing [[{"id":1,"name":"food","quantity":2}]]
+2022-02-15 16:47:55,993 DEBUG [GroceryItemApplication][request_path:/groceries[GET]][session_id:65EB61E3BF0EBED52B8B466D8AE31D10] - Completed 200 OK
+2022-02-15 19:26:10,438  INFO [GroceryItemApplication][request_path:[]][session_id:] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-15 19:26:10,456  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Shutdown initiated...
+2022-02-15 19:26:11,119  INFO [GroceryItemApplication][request_path:[]][session_id:] - HikariPool-1 - Shutdown completed.

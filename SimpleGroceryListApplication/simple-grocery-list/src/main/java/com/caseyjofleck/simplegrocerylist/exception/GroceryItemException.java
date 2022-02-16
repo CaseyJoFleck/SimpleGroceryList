@@ -15,21 +15,8 @@ public class GroceryItemException extends RuntimeException{
         this.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
-    public GroceryItemException(String message, Throwable throwable) {
-        super(message, throwable);
-
-        this.message = message;
-        this.statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
-    }
-
     public GroceryItemException(String message, HttpStatus statusCode){
         super(message);
-        this.message = message;
-        this.statusCode = statusCode;
-    }
-
-    public GroceryItemException(String message, HttpStatus statusCode, Throwable throwable){
-        super(message, throwable);
         this.message = message;
         this.statusCode = statusCode;
     }

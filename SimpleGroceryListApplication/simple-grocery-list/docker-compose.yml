@@ -1,28 +1,22 @@
-version: "3.9"
+version: '3.9'
 
 services:
-  postgres-db:
+  simple-grocery-list-web:
     build: .
     ports:
-      - "5432:5432"
+      - "8080:8080"
     environment:
       - POSTGRES_PASSWORD=docker
       - POSTGRES_USER=postgres
       - POSTGRES_DB=grocery
-      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - type: volume
-        source: POSTGRES
-        target: /var/lib/postgresql/data
+      - type: bind
+        source: ./log/data
+        target: /log
     networks:
       - app-net
-
-volumes:
-  POSTGRES:
-    external: true
 
 networks:
   app-net:
     external:
       name: grocery-net
-

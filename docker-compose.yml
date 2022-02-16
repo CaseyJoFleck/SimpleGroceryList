@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  postgres-db:
+    build:
+      context: ./SimpleGroceryListDB
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - type: volume
+        source: POSTGRES
+        target: /var/lib/postgresql/data
+    networks:
+      - app-net
+  simple-grocery-list-web:
+    build:
+      context: ./SimpleGroceryListApplication/simple-grocery-list
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - type: bind
+        source: ./SimpleGroceryListApplication/simple-grocery-list/log/data
+        target: /log
+    networks:
+      - app-net
+    depends_on:
+      - postgres-db
+
+volumes:
+  POSTGRES:
+    external: true
+
+networks:
+  app-net:
+    external:
+      name: grocery-net
+
+secrets:
+  postgres-connection:
+    file: ./config/secrets.json

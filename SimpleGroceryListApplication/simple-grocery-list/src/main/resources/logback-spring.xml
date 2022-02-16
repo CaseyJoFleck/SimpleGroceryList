@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="log.base" value="./log/logback"/>
+    <property name="log.base" value="./log/simple-grocery-app"/>
     <property name="app.name" value="GroceryItemApplication"/>
     <property name="service.package" value="com.caseyjofleck.simplegrocerylist"/>
     <property name="log.pattern" value="%d{ISO8601} ${LOG_LEVEL_PATTERN:-%5p} [${app.name}][request_path:%X{requestPath}[%X{requestMethod}]][session_id:%X{sessionId}] - %m%n"/>
